@@ -8,7 +8,8 @@
                  [duct/module.web "0.6.2"]
                  [duct/module.ataraxy "0.2.0"]
                  [duct/module.sql "0.3.2"]
-                 [org.xerial/sqlite-jdbc "3.20.0"]]
+                 [org.xerial/sqlite-jdbc "3.20.0"]
+                 [hiccup "1.0.5"]]
   :plugins [[duct/lein-duct "0.10.3"]]
   :main ^:skip-aot job-search-amp.main
   :resource-paths ["resources" "target/resources"]

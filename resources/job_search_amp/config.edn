@@ -6,7 +6,11 @@
  :duct.module/sql {}
 
  :duct.module/ataraxy
- {[:get "/example"] [:example]}
+ {[:get "/"] [:top]
+  [:get "/example"] [:example]}
+
+ :job-search-amp.handler/top
+ {:db #ig/ref :duct.database/sql}
 
  :job-search-amp.handler/example
  {:db #ig/ref :duct.database/sql}}
