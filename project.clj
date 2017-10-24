@@ -3,6 +3,7 @@
   :url "http://example.com/FIXME"
   :min-lein-version "2.0.0"
   :dependencies [[org.clojure/clojure "1.9.0-beta2"]
+                 [org.clojure/data.json "0.2.6"]
                  [duct/core "0.6.1"]
                  [duct/module.logging "0.3.1"]
                  [duct/module.web "0.6.2"]
