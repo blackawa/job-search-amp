@@ -3,10 +3,18 @@
             [ataraxy.response :as response] 
             [clojure.java.io :as io]
             [integrant.core :as ig]
-            [hiccup.core :as hiccup]))
+            [job-search-amp.view.layout :as layout]))
 
 (defn- top []
-  (hiccup/html [:span {:class "foo"} "bar"]))
+  (layout/html-amp
+   [:style {:amp-custom ""}
+    "body { background-color: #f2f2f2;}"]
+   [:div.container
+    [:nav
+     [:h1 "マッハアンプ"]]
+    [:section
+     [:amp-img {:src "rippotai.jpg" :alt "rippotai" :height "400" :width "400"}]
+     [:p "検索しよう！"]]]))
 
 (defmethod ig/init-key :job-search-amp.handler/top [_ options]
   (fn [{[_] :ataraxy/result}]
