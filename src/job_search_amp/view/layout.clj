@@ -1,5 +1,9 @@
 (ns job-search-amp.view.layout
-  (:require [hiccup.core :as hiccup]))
+  (:require [garden.core :as garden]
+            [hiccup.core :as hiccup]))
+
+(defn- style []
+  (garden/css [:body {:background-color "#f1f1f1"}]))
 
 (defn html-amp [& body-content]
   (hiccup/html
@@ -27,6 +31,7 @@
      [:noscript
       [:style {:amp-boilerplate ""}
        "body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}"]]
-     [:script {:async "" :src "https://cdn.ampproject.org/v0.js"}]]
+     [:script {:async "" :src "https://cdn.ampproject.org/v0.js"}]
+     [:style {:amp-custom ""} (style)]]
     [:body
      body-content]]))

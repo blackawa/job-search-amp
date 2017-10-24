@@ -1,14 +1,12 @@
 (ns job-search-amp.handler.top
   (:require [ataraxy.core :as ataraxy]
-            [ataraxy.response :as response] 
+            [ataraxy.response :as response]
             [clojure.java.io :as io]
             [integrant.core :as ig]
             [job-search-amp.view.layout :as layout]))
 
 (defn- top []
   (layout/html-amp
-   [:style {:amp-custom ""}
-    "body { background-color: #f2f2f2;}"]
    [:div.container
     [:nav
      [:h1 "マッハアンプ"]]
